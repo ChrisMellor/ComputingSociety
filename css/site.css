@@ -1,0 +1,32 @@
+html
+{
+    position   : relative;
+    min-height : 100%;
+}
+
+hr
+{
+    border-color : #343A40;
+}
+
+body
+{
+    background-color : #EEEEEE;
+    margin-bottom    : 60px;
+    padding-top      : 70px;
+    padding-bottom   : 70px;
+}
+
+.footer
+{
+    position : absolute;
+    bottom   : 0;
+    width    : 100%;
+}
+
+.navbar
+{
+    margin-bottom : 5%;
+
+}
+
