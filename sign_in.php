@@ -4,16 +4,11 @@
     $page_description = "Description of this page";
 
     include 'include/header.php';
-?>
-<style>
-    <?php include 'css/login.css'?>
-</style>
-<?php
     include 'include/navigation.php';
 ?>
 
 <div class="container">
-    <form name="login" role="form" class="form-horizontal" action="php/loggingIn.php" method="post">
+    <form name="login" role="form" class="form-horizontal" action="php/login.php" method="post">
         <div class="form-group">
             <div class="col-md-6 col-md-offset-3">
                 <h2 class="form-signin-heading">Login to CompSoc!</h2>

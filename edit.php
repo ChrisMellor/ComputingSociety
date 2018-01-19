@@ -1,7 +1,7 @@
 <?php
 
 $page_title = 'Admin';
-$panel_title = 'Main';
+$panel_title = 'Edit';
 $page_description = 'Description of this page';
 
 include 'include/header.php';
