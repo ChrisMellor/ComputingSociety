@@ -24,6 +24,7 @@ include 'include/navigation.php';
 				echo 'active';
 			} ?>" role="presentation"><a href="create.php">Add</a></li>
             <li class="<?php if ($panel_title == 'Edit')
+            hf
 			{
 				echo 'active';
 			} ?>" role="presentation"><a href="edit.php">Edit</a></li>
