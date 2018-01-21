@@ -40,7 +40,6 @@ include 'include/navigation.php';
     </div>
 
     <div class="col-md-12">
-
         <form action="php/register.php" class="form-horizontal" role="form" method="POST" name="register">
             <h3>Create an Account</h3>
             <hr>
