@@ -1,10 +1,10 @@
 <?php
 
-    $page_title = "Profile";
-    $page_description = "Description of this page";
+$page_title = "Profile";
+$page_description = "Description of this page";
 
-    include 'include/header.php';
-    include 'include/navigation.php';
+include 'include/header.php';
+include 'include/navigation.php';
 ?>
 <div class="container">
     <form action="php/updateUserProfile.php" role="form" method="post" class="form-horizontal">
@@ -23,7 +23,8 @@
         <div class="form-group">
             <div class="col-md-6">
                 <label class="control-label" for="studentNumber">Student Number</label>
-                <input disabled id="studentNumber" class="form-control" type="text" value="<?php echo $_SESSION['StudentNumber']; ?>">
+                <input disabled id="studentNumber" class="form-control" type="text"
+                       value="<?php echo $_SESSION['Student_ID']; ?>">
             </div>
             <div class="col-md-6">
                 <label for="course" class="control-label">Course</label>
@@ -48,7 +49,7 @@
     </form>
 </div>
 <?php
-    include 'include/footer.php';
+include 'include/footer.php';
 ?>
 
 
