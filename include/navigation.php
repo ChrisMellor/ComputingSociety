@@ -20,14 +20,14 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
 					<?php
-					if (!isset($_SESSION['FirstName']))
+					if (!isset($_SESSION['Role']))
 					{
 						?>
                         <li class="<?php if ($page_title == 'Login') echo 'active' ?>"><a href="login.php">Login</a>
                         </li>
 						<?php
 					}
-					else if (isset($_SESSION['FirstName']) && ($_SESSION['Role'] == "Member"))
+					else if ($_SESSION['Role'] == 'Member')
 					{
 						?>
                         <p class="navbar-text"><?php echo "Welcome " . $_SESSION['FirstName'] . "!"; ?></p>
@@ -37,7 +37,7 @@
                         <li><a href="php/logout.php">Logout</a></li>
 						<?php
 					}
-					else if (isset($_SESSION['FirstName']) && ($_SESSION['Role'] == "Admin"))
+					else if ($_SESSION['Role'] == 'Admin')
 					{
 						?>
                         <p class="navbar-text"><?php echo "Welcome " . $_SESSION['FirstName'] . "! (Admin)"; ?></p>
@@ -50,6 +50,7 @@
                         <li><a href="php/logout.php">Logout</a></li>
 						<?php
 					}
+
 					?>
                 </ul>
             </div><!--/.nav-collapse -->

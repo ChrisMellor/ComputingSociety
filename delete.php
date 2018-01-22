@@ -34,7 +34,24 @@ include 'include/navigation.php';
         </ul>
     </div>
     <div class="col-md-12">
+        <form name="delete" role="form" class="form-horizontal" action="php/deleteData.php" method="post">
+            <div class="form-group">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <h2 class="form-signin-heading">Choose a user to delete</h2>
+                    <hr>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6 col-lg-offset-3">
+                    <label for="student_id" class="control-label">Username</label>
+                    <input id="student_id" name="student_id" class="form-control" type="text" required>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-offset-4">
+                <input id="delete" type="submit" class="btn btn-primary btn-block" value="Delete User"/>
+            </div>
 
+        </form>
     </div>
 </div>
 <?php

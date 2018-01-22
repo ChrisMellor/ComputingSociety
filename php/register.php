@@ -13,10 +13,12 @@ if (isset($_POST['regStudentNumber']))
 	$password = mysqli_real_escape_string($conn, $password);
 	$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 	$username = $student_ID;
-	$sql = "INSERT INTO user (student_id, username, email, password, role, active) VALUES ('$student_ID','$username','$email','$hashed_password','Admin','active')";
+	$role = $_POST['role'];
+	$sql = "INSERT INTO user (student_id, email, password, role, active) VALUES ('$student_ID','$email','$hashed_password','$role','active')";
 	$result = mysqli_query($conn, $sql) or die("Error: " . mysqli_error($conn));
 	if ($result)
 	{
+		header('Location: ../create.php');
 
 	}
 }

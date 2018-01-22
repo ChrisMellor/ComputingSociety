@@ -1,6 +1,6 @@
 <?php
 include 'base.php';
-
+session_start();
 if (isset($_POST['student_id']))
 {
 //escapes special characters in a string
@@ -8,17 +8,13 @@ if (isset($_POST['student_id']))
 	$student_id = stripslashes($_POST['student_id']);
 	$password = mysqli_real_escape_string($conn, $password);
 	$password = stripslashes($_POST['password']);
-	echo 'cry';
 
-
-//    $query = "SELECT * FROM user WHERE student_id='$student_id'";
 	$query = "SELECT * FROM user LEFT JOIN profile ON user.student_ID = profile.student_ID WHERE user.student_ID = '$student_id'";
 	$result = mysqli_query($conn, $query) or die(mysqli_error($conn));
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	$count = mysqli_num_rows($result);
 	if ($count == 1)
 	{
-		echo 'derp';
 		if (password_verify($password, $row['password']))
 		{
 			$_SESSION['Student_ID'] = $row['student_id'];
@@ -41,6 +37,14 @@ if (isset($_POST['student_id']))
 
 			header('Location: ../index.php');
 		}
+		else
+		{
+			header('Location: ../login.php');
+		}
+	}
+	else
+	{
+		header('Location: ../login.php');
 	}
 }
 ?>
